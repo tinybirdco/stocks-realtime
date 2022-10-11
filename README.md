@@ -63,6 +63,9 @@ For generating data for popular stock symbols, we used:
 python3 data-generator/stream_data.py --symbols AMZN,TSLA,NVDA,AAPL,MSFT,META,GOOG
 ```
 
+If required, install the required libraries with `pip install websocket-client`.
+
+
 ## Token Security
 
 You now have your data project in Tinybird with data.
