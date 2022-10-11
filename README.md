@@ -80,7 +80,7 @@ HOST=$(cat .tinyb | jq '.host'| tr -d '"')
 
 curl -H "Authorization: Bearer $TOKEN" \
 -d "name=endpoints_token" \
--d "scope=PIPES:READ:api_candelstick_chart" \
+-d "scope=PIPES:READ:api_candlestick_chart" \
 -d "scope=PIPES:READ:api_ui_filters" \
 $HOST/v0/tokens/
 ```
