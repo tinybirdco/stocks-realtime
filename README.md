@@ -65,6 +65,8 @@ python3 data-generator/stream_data.py --symbols AMZN,TSLA,NVDA,AAPL,MSFT,META,GO
 
 If required, install the required libraries with `pip install websocket-client`.
 
+_Note: data will only stream while the market is open._
+
 
 ## Token Security
 
