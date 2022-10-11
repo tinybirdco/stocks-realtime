@@ -1,0 +1,53 @@
+NODE filter_data
+SQL >
+
+    %
+    SELECT t, S, ap
+    FROM stocks_stream
+    WHERE
+        S
+        = {{
+            String(
+                selected_symbol,
+                "AAPL",
+                description="Stock symbol",
+                required=False,
+            )
+        }}
+        AND t BETWEEN toDateTime(
+            {{
+                DateTime(
+                    start_dt,
+                    "2022-10-02 10:10:10",
+                    description="Start datetime",
+                    required=False,
+                )
+            }}
+        )
+        AND toDateTime(
+            {{
+                DateTime(
+                    end_dt,
+                    "2022-10-04 10:10:10",
+                    description="End datetime",
+                    required=False,
+                )
+            }}
+        )
+
+
+
+NODE endpoint
+SQL >
+
+    SELECT
+        toStartOfMinute(t) as ts,
+        argMin(ap, t) as open,
+        argMax(ap, t) as close,
+        min(ap) as low,
+        max(ap) as high
+    FROM filter_data
+    GROUP BY ts
+    ORDER BY ts asc
+
+

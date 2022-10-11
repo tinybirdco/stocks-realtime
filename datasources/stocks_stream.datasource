@@ -1,0 +1,17 @@
+
+SCHEMA >
+    `S` String `json:$.S`,
+    `T` String `json:$.T`,
+    `ap` Float32 `json:$.ap`,
+    `as` Int16 `json:$.as`,
+    `ax` String `json:$.ax`,
+    `bp` Float32 `json:$.bp`,
+    `bs` Int16 `json:$.bs`,
+    `bx` String `json:$.bx`,
+    `c` Array(String) `json:$.c[:]`,
+    `t` DateTime64(3) `json:$.t`,
+    `z` String `json:$.z`
+
+ENGINE "MergeTree"
+ENGINE_PARTITION_KEY "toYear(t)"
+ENGINE_SORTING_KEY "t, bs, bx, z"

@@ -1,0 +1,6 @@
+NODE endpoint
+SQL >
+
+    SELECT distinct S as value FROM stocks_stream order by value
+
+
