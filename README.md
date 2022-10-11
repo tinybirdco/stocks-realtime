@@ -65,7 +65,7 @@ python3 data-generator/stream_data.py --symbols AMZN,TSLA,NVDA,AAPL,MSFT,META,GO
 
 ## Token Security
 
-You now have your data project in Tinybird with simulated data.
+You now have your data project in Tinybird with data.
 
 The endpoints need a [token](https://www.tinybird.co/guide/serverless-analytics-api) to be consumed. You should not expose your admin token, so let's create one with more limited scope:
 
