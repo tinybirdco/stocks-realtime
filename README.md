@@ -1,14 +1,6 @@
 # Data Project
 Data project to analyze realtime stock market data in a candlestick chart using [Alpaca](https://alpaca.markets/) + [Tinybird](https://www.tinybird.co/).
 
-## Alpaca Credentials
-
-Go to [Alpaca](https://alpaca.markets/) and sign up for a free account (or login if you already have an account). On your dashboard overview, generate a new API key and secret.
-
-![alpaca_api_key](https://user-images.githubusercontent.com/105812959/195167108-7ceb66f1-dcf1-4924-958f-e38f77236427.png)
-
-Update the `.alpaca` file with your credentials.
-
 ## Working with the Tinybird CLI
 
 To start working with data projects as if they were software projects, first install the Tinybird CLI in a virtual environment.
@@ -25,6 +17,14 @@ Choose your region: __1__ for _us-east_, __2__ for _eu_
 
 Go to your workspace, copy a token with admin rights and paste it. A new `.tinyb` file will be created.
 
+
+## Alpaca Credentials
+
+Go to [Alpaca](https://alpaca.markets/) and sign up for a free account (or login if you already have an account). On your dashboard overview, generate a new API key and secret.
+
+![alpaca_api_key](https://user-images.githubusercontent.com/105812959/195167108-7ceb66f1-dcf1-4924-958f-e38f77236427.png)
+
+Update the `.alpaca` file with your credentials.
 
 
 ## Project Description
