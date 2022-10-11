@@ -5,7 +5,7 @@ Data project to analyze realtime stock market data in a candlestick chart using 
 
 Go to [Alpaca](https://alpaca.markets/) and sign up for a free account (or login if you already have an account). On your dashboard overview, generate a new API key and secret.
 
-![alpaca_api_key](../../Desktop/alpaca_api_key.png)
+![alpaca_api_key](https://user-images.githubusercontent.com/105812959/195167108-7ceb66f1-dcf1-4924-958f-e38f77236427.png)
 
 Update the `.alpaca` file with your credentials.
 
