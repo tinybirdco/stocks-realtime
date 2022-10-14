@@ -21,12 +21,10 @@ def send_event(ds: str, token: str, messages: list, host: str):
 @click.option('--datasource', help = 'the destination datasource. Default = stocks_stream', default='stocks_stream')
 @click.option('--symbols', help = "The comma-separated symbols to query for. Default = AAPL", default='AAPL')
 @click.option('--events', help = 'number of events per request. Sent as NDJSON in the body. Default = 50', type=int, default=50)
-@click.option('--sample', help = 'number of messages simulated in each repetition. Default = 100000000', type=int, default=100000000)
 
 def send_hfi(datasource,
              symbols,
-             events,
-             sample
+             events
              ):
 
     #token and host from Tinybird workspace
@@ -55,7 +53,7 @@ def send_hfi(datasource,
     ws.send(json.dumps(subscription))
     print(json.loads(ws.recv()))
 
-    for _ in range(sample):
+    while True:
 
         nd = []
 
